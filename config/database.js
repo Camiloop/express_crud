@@ -1,7 +1,8 @@
-// conexion a base de datos
+// Conexion a base de datos
+
 import { Sequelize } from "sequelize";
 
-const dB = new Sequelize("postgres", "postgres", "admin", {
+const dB = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASSWORD, {
   host: "localhost",
   port: "5432",
   dialect: "postgres",

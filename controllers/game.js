@@ -1,6 +1,6 @@
 import Games from "../models/games.js";
 
-const getGames = async (requ, res) => {
+const getGames = async (req, res) => {
   try {
     const game = await Games.findAll();
     res.send(game);
@@ -19,7 +19,5 @@ export const createGame = async (req, res) => {
     console.log(err);
   }
 };
-
-// No hice todas las funciones CRUD porque perdi mucho tiempo buscando porque mi base de datos no se conectaba xD
 
 export default getGames;
